@@ -56,7 +56,7 @@ function trainingData(filePath) {
 
             }
             
-            // Expired or expiring soon trainings
+            // Expired or expiring soon trainings. (Task 3)
             if(completion.expires && (completion.expires <= expirationDate || completion.expires>expirationDate && completion.expires< oneMonthLater )){
                 expiredTrainings[person] = expiredTrainings[person] || [];
                 const status = completion.expires > expirationDate ? "expired" : "expires soon" ;
@@ -82,3 +82,4 @@ function trainingData(filePath) {
 }
 
 trainingData('trainings.txt')
+console.log("Check for respective JSON files for outputs")
